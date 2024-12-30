@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+body {
+    margin: 0;
+    background: #f0f8ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: url('./new-years-day-1134.gif') no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #606060;
+  
+  }
+  
+  .container {
+    position: relative;
+    font-size: 5rem;
+
+  }
+  
+  .year {
+    position: relative;
+  }
+  
+  .number {
+    color: red;
+    animation: replaceNumber 6s forwards;
+  }
+  
+  .balloon {
+    position: absolute;
+    top: -400px;
+    left: 230px;
+    font-size: 4rem;
+    transform: translateX(-50%);
+    animation: floatDown 3s forwards, floatUp 3s 3s forwards;
+    
+  }
+  
+  .balloon-number {
+    position: absolute;
+    top:-40px;
+    left:40px;
+    transform: translate(-50%, -50%);
+    color: green;
+    font-size: 5rem;
+    font-weight: 500;
+  }
+  .slogan{
+    z-index: 20px;
+    position:absolute;
+    top:-72px;
+    white-space:nowrap;
+    left:200px;
+    font-size:2.4rem;
+    color:#3ce127;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: floatLeft 4s forwards;
+    font-family: "Rubik Gemstones", serif;
+  }
+  .slogan1{
+    z-index: 20px;
+    position:absolute;
+    bottom: -40px;
+    white-space:nowrap;
+    left:200px;
+    font-size:1.7rem;
+    color:#0dffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: floatRight 4s forwards;
+    font-family: "Rubik Gemstones", serif;
+  }
+  .text-3d {
+    font-size: 7rem;
+    font-weight: bold;
+    color: #b1b1b1;
+    text-shadow: 
+      1px 1px 0 #606060, 
+      2px 2px 0 #414141, 
+      3px 3px 0 #000, 
+      4px 4px 0 #000, 
+      5px 5px 0 #000, 
+      6px 6px 0 #000;
+    background: linear-gradient(145deg, #90caf9, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  
+
+  /* Balloon floats down */
+  @keyframes floatDown {
+    0% { top: -400px; }
+    100% { top: -172px; }
+  }
+  
+  /* Balloon floats up */
+  @keyframes floatUp {
+    0% { top: -172px; opacity: 1; }
+    100% { top: -400px; opacity: 0; }
+  }
+  
+  /* Replace number in the year */
+  @keyframes replaceNumber {
+    0% { color: red; }
+    50% { color: transparent; }
+    100% { color: green; }
+  }
+  
+
+  @keyframes floatLeft {
+    0% { left:-200px; opacity: 0; }
+    100% { left:-25px; opacity: 1;}
+  }
+  
+  @keyframes floatRight {
+    0% { right:-200px; opacity: 0; }
+    100% { left:-25px; opacity: 1;}
+  }
+
+  
