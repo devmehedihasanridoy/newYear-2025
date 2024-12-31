@@ -63,9 +63,9 @@ body {
   .slogan1{
     z-index: 20px;
     position:absolute;
-    bottom: -40px;
+    bottom: -45px;
     white-space:nowrap;
-    left:200px;
+    left:10px;
     font-size:1.7rem;
     color:#0dffff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -88,7 +88,21 @@ body {
     -webkit-text-fill-color: transparent;
     position: relative;
   }
-  
+  .typing {
+    font-size: 24px;
+    color: #3ce127;
+    border-right: 2px solid #333; /* Blinking cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink 0.7s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
   /* Balloon floats down */
   @keyframes floatDown {

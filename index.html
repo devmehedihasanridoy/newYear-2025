@@ -12,7 +12,7 @@
         <div class="year text-3d">
           202<span class="number text-3d">4</span>
         </div>
-        <p class="slogan1">Wishing you joy and success!</p>
+         <div class="slogan1"><p class="typing" id="typing"></p></div>
         <div class="balloon">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="200" viewBox="0 0 150 200">
                 <!-- Balloon body -->
@@ -60,6 +60,27 @@ setTimeout(() => {
   document.getElementById('balloonNumber').style.color = 'red';
 }, 3000);
 
+
+// 
+const text = "Wishing you joy and success!"; // Text to type
+    const typingElement = document.getElementById("typing");
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 100); // Adjust typing speed (milliseconds)
+      } else {
+        setTimeout(() => {
+          index = 0;
+          typingElement.textContent = ""; // Clear the text
+          typeText(); // Restart typing
+        }, 1000); // Pause before restarting (milliseconds)
+      }
+    }
+
+    typeText();
     </script>  
 </body>
 </html>
